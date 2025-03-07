@@ -1,0 +1,12 @@
+{% extends "estructura/principal.html" %}
+{% block content %}
+    <h2>Crear Comentario</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="texto" placeholder="Texto del comentario" required>
+        <input type="text" name="aplicacion" placeholder="Aplicación" required>
+        <input type="text" name="puntuacion_comentario" placeholder="1/2/3/4/5" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}
