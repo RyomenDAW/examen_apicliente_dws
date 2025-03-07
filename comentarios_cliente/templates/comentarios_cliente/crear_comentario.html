@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Crear Comentario</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="texto" placeholder="Texto del comentario" required>
+        <input type="text" name="aplicacion" placeholder="Aplicación" required>
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}
